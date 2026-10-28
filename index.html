@@ -10,8 +10,6 @@
 :root{--ink:#1a1a18;--muted:#8a8880;--faint:#f4f2ee;--line:#e0ddd8;--accent:#c8a97e;--bg:#faf9f6;}
 html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;font-weight:300;background:var(--bg);color:var(--ink);min-height:100vh;}
-.cursor{position:fixed;width:8px;height:8px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);left:-100px;top:-100px;}
-.cursor-ring{position:fixed;width:32px;height:32px;border:1px solid var(--ink);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:0.4;left:-100px;top:-100px;transition:left 0.06s,top 0.06s;}
 .tab-bar{position:fixed;top:0;left:0;right:0;z-index:99;display:flex;background:var(--bg);border-bottom:1px solid var(--line);padding:0 4rem;overflow-x:auto;}
 .tab-btn{font-family:'Jost',sans-serif;font-weight:300;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;padding:1.1rem 0;margin-right:3rem;position:relative;transition:color 0.25s;white-space:nowrap;}
 .tab-btn::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:1px;background:var(--accent);transform:scaleX(0);transition:transform 0.3s;transform-origin:left;}
@@ -123,8 +121,6 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;}
 </style>
 </head>
 <body>
-<div class="cursor" id="cur"></div>
-<div class="cursor-ring" id="ring"></div>
 
 <div class="lightbox" id="lightbox">
   <button class="lb-close" id="lbClose">&#10005;</button>
@@ -147,7 +143,6 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;}
   <div id="hero">
     <p class="hero-eyebrow">Playwright &middot; Dancer &middot; Writer</p>
     <h1 class="hero-name">Xinning Shao</h1>
-    <p class="hero-tagline">To look, with sober care.</p>
     <div class="hero-cta">
       <button class="cta-btn primary" onclick="showPage('plays')">View Work</button>
       <button class="cta-btn secondary" onclick="showPage('contact')">Get in Touch</button>
@@ -162,6 +157,7 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;}
       <p>Xinning is a writer and dancer raised between China and Singapore. She graduated from Yale College with a double major in Comparative Literature and Cognitive Science in May 2026. Now based in San Francisco, she writes in both English and Mandarin.</p>
       <p>Her short play, &#22238;&#22768; (<em>Her Last Tape</em>), which she also directed, was selected as one of 18 finalists in the Emerging Theater Artists’ Competition at China’s Wuzhen Theatre Festival (&#20044;&#38215;&#25103;&#21095;&#33410;&#38738;&#24180;&#31454;&#28436;) and staged in October 2026. Her translation of Liao Yimei’s play <em>Amber</em> received the Richard Maxwell Prize for Translation and Translation Studies of 2026. She won the Seoul Players’ 2025 10-Minute Play Festival for directing. She has also worked with Stan Lai’s Theatre Above in Shanghai and at the Huichang Theatre Festival (2025).</p>
       <p>Beyond the stage, Xinning runs a column for the Singapore-based newspaper <em>Lianhe Zaobao</em> (&#32852;&#21512;&#26089;&#25253;), spoke at the Singapore Writers’ Festival in 2023, and has been published in the <em>Singapore Poetry Anthology</em>.</p>
+      <p>Xinning believes in the power of looking. Her work aims to scratch past the onslaught of everyday sensory phenomena to reveal, for lack of a better word, truth, with a very small “t.”</p>
       <p>She is currently developing full-length Mandarin and English versions of <em>&#22238;&#22768;</em> (<em>Her Last Tape</em>) while dancing with the Oakland-based dance crew Tribe Called Groove.</p>
     </div>
   </section>
@@ -170,7 +166,7 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;}
 <!-- PLAYWRITING -->
 <div class="page" id="page-plays">
 <section>
-<div class="sec-hdr reveal"><span class="sec-eyebrow">Playwriting &middot; Theater</span><h2 class="sec-title">Playwriting</h2><p class="sec-sub">Embodying language</p><div class="sec-rule"></div></div>
+<div class="sec-hdr reveal"><span class="sec-eyebrow">Playwriting &middot; Theater</span><h2 class="sec-title">Playwriting</h2><p class="sec-sub">To embody language</p><div class="sec-rule"></div></div>
 <div class="plays-grid">
 
 <!-- ECHO (HER LAST TAPE) -->
@@ -465,7 +461,7 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;}
 <!-- DANCE -->
 <div class="page" id="page-dance">
 <section>
-<div class="sec-hdr reveal"><span class="sec-eyebrow">Dance &middot; Choreography</span><h2 class="sec-title">Movement</h2><p class="sec-sub">Letting the body speak</p><div class="sec-rule"></div></div>
+<div class="sec-hdr reveal"><span class="sec-eyebrow">Dance &middot; Choreography</span><h2 class="sec-title">Movement</h2><p class="sec-sub">To liberate language</p><div class="sec-rule"></div></div>
 <div class="plays-grid">
 
 <!-- THE WAY WE SAY GOODBYE -->
@@ -572,7 +568,7 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;}
 <!-- WRITING -->
 <div class="page" id="page-writing">
 <section>
-<div class="sec-hdr reveal"><span class="sec-eyebrow">Writing &middot; Translation</span><h2 class="sec-title">Writing</h2><p class="sec-sub">Savoring words</p><div class="sec-rule"></div></div>
+<div class="sec-hdr reveal"><span class="sec-eyebrow">Writing &middot; Translation</span><h2 class="sec-title">Writing</h2><p class="sec-sub">To savor language</p><div class="sec-rule"></div></div>
 <div class="writing-list reveal">
 
 <div class="wi">
@@ -624,10 +620,6 @@ footer p{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;}
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-var cur=document.getElementById('cur');
-var ring=document.getElementById('ring');
-document.addEventListener('mousemove',function(e){cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';});
-
 function showPage(id){
   var pages=document.querySelectorAll('.page');
   for(var i=0;i<pages.length;i++){pages[i].style.display='none';pages[i].classList.remove('active');}
